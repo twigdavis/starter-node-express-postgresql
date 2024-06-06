@@ -53,3 +53,28 @@ This starter code closely follows the best practices and patterns established in
 By appending `?ssl=true` to the connection URL, you'll ensure a secure connection to your database, resolving any SSL-related issues.
 
 If you have trouble getting the server to run, reach out for assistance.
+
+------------------
+
+## npx commands to create migration files
+
+npx knex migrate:make createSuppliersTable
+npx knex migrate:make createProductsTable
+npx knex migrate:make createCategoriesTable
+npx knex migrate:make createProductsCategoriesTable
+npx knex migrate:make productsAddPriceAndChangeProductNameToProductTitle
+
+## npx commands to run and rollback migrations
+
+npx knex migrate:rollback
+npx knex migrate:list
+npx knex migrate:latest
+npx knex migrate:down productsAddPriceAndChangeProductNameToProductTitle
+npx knex migrate: up productsAddPriceAndChangeProductNameToProductTitle
+
+## npx commands to create seed files
+
+npx knex seed:make 00-suppliers
+npx knex seed:make 01-products
+npx knex seed:make 02-categories
+npx knex seed:make 03-products_categories
