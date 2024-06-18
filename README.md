@@ -78,3 +78,8 @@ npx knex seed:make 00-suppliers
 npx knex seed:make 01-products
 npx knex seed:make 02-categories
 npx knex seed:make 03-products_categories
+
+# npx commands to run seed files
+
+npx knex seed:run 
+npx knex seed:run --specific=seed-filename.js
